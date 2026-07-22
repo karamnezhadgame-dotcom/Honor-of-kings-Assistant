@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/paper_white">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:background="@color/ink_grey" android:text="装备模拟器" android:textColor="@color/gold" android:textSize="24sp" android:fontFamily="serif" android:gravity="center" />
+    <GridLayout android:id="@+id/gl_slots" android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="3" android:rowCount="2" android:padding="16dp" android:background="@color/canghuang" android:layout_margin="16dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_items" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:padding="8dp" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="4" />
+</LinearLayout>
