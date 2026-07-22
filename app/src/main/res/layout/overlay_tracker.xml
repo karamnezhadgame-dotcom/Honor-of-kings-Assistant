@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/overlay_background"
+    android:padding="12dp">
+    <TextView android:id="@+id/tv_cooldowns" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="加载中..." android:textColor="@color/gold" android:textSize="12sp" />
+    <TextView android:id="@+id/tv_gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="经济差: 0" android:textColor="@color/paper_white" android:textSize="12sp" />
+</LinearLayout>
