@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/paper_white">
+    <TextView android:id="@+id/tv_insights_placeholder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/gold" android:textSize="20sp" android:fontFamily="serif" android:text="大神观 - 即将上线" />
+</LinearLayout>
