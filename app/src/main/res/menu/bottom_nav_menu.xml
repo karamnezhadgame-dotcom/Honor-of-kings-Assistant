@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/heroListFragment" android:icon="@drawable/ic_scroll" android:title="英雄录" />
-    <item android:id="@+id/insightsFragment" android:icon="@drawable/ic_build" android:title="大神观" />
-    <item android:id="@+id/loreFragment" android:icon="@drawable/ic_live" android:title="峡谷志" />
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_live"
+        android:title="首页" />
+    <item
+        android:id="@+id/heroListFragment"
+        android:icon="@drawable/ic_scroll"
+        android:title="英雄录" />
+    <item
+        android:id="@+id/loreFragment"
+        android:icon="@drawable/ic_scroll"
+        android:title="峡谷志" />
+    <item
+        android:id="@+id/buildSimulatorFragment"
+        android:icon="@drawable/ic_build"
+        android:title="装备" />
 </menu>

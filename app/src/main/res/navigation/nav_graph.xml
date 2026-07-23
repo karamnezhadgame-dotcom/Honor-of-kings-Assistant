@@ -2,8 +2,57 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/heroListFragment">
-    <fragment android:id="@+id/heroListFragment" android:name="com.honorassistant.app.ui.hero.HeroListFragment" android:label="英雄录" />
-    <fragment android:id="@+id/insightsFragment" android:name="com.honorassistant.app.ui.insights.InsightsFragment" android:label="大神观" />
-    <fragment android:id="@+id/loreFragment" android:name="com.honorassistant.app.ui.lore.LoreFragment" android:label="峡谷志" />
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.honorassistant.app.ui.home.HomeFragment"
+        android:label="首页" />
+
+    <fragment
+        android:id="@+id/heroListFragment"
+        android:name="com.honorassistant.app.ui.hero.HeroListFragment"
+        android:label="英雄录">
+        <action
+            android:id="@+id/action_heroListFragment_to_heroDetailFragment"
+            app:destination="@id/heroDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/heroDetailFragment"
+        android:name="com.honorassistant.app.ui.hero.HeroDetailFragment"
+        android:label="英雄详情">
+        <argument
+            android:name="heroId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/insightsFragment"
+        android:name="com.honorassistant.app.ui.insights.InsightsFragment"
+        android:label="大神观" />
+
+    <fragment
+        android:id="@+id/loreFragment"
+        android:name="com.honorassistant.app.ui.lore.LoreFragment"
+        android:label="峡谷志">
+        <action
+            android:id="@+id/action_loreFragment_to_loreDetailFragment"
+            app:destination="@id/loreDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loreDetailFragment"
+        android:name="com.honorassistant.app.ui.lore.LoreDetailFragment"
+        android:label="典故详情">
+        <argument
+            android:name="loreId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/buildSimulatorFragment"
+        android:name="com.honorassistant.app.ui.buildsimulator.BuildSimulatorFragment"
+        android:label="装备模拟器" />
+
 </navigation>

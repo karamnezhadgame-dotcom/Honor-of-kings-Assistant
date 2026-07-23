@@ -1,26 +1,39 @@
 package com.honorassistant.app.ui.buildsimulator.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.honorassistant.app.R
 import com.honorassistant.app.data.models.Item
+import com.honorassistant.app.databinding.ItemBuildItemBinding
 
-class ItemAdapter(private val onDragStart: (Item) -> Unit) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
-    private var items = emptyList<Item>()
-    fun submitList(list: List<Item>) { items = list; notifyDataSetChanged() }
+class ItemAdapter(private val onItemClick: (Item) -> Unit) :
+    ListAdapter<Item, ItemAdapter.ItemViewHolder>(DIFF) {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_build_item, parent, false) as ImageView
-        return ItemViewHolder(view)
+        val binding = ItemBuildItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ItemViewHolder(binding)
     }
+
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item = items[position]
-        Glide.with(holder.itemView).load(item.iconUrl).placeholder(R.drawable.ic_item_placeholder).into(holder.itemView as ImageView)
-        holder.itemView.setOnLongClickListener { onDragStart(item); true }
+        holder.bind(getItem(position))
     }
-    override fun getItemCount(): Int = items.size
-    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+    inner class ItemViewHolder(private val binding: ItemBuildItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(item: Item) {
+            binding.tvItemName.text = item.name
+            binding.tvItemPrice.text = "${item.price}金"
+            binding.root.setOnClickListener { onItemClick(item) }
+        }
+    }
+
+    companion object {
+        val DIFF = object : DiffUtil.ItemCallback<Item>() {
+            override fun areItemsTheSame(oldItem: Item, newItem: Item) = oldItem.id == newItem.id
+            override fun areContentsTheSame(oldItem: Item, newItem: Item) = oldItem == newItem
+        }
+    }
 }

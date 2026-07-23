@@ -5,6 +5,40 @@
     android:orientation="vertical"
     android:background="@drawable/overlay_background"
     android:padding="12dp">
-    <TextView android:id="@+id/tv_cooldowns" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="加载中..." android:textColor="@color/gold" android:textSize="12sp" />
-    <TextView android:id="@+id/tv_gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="经济差: 0" android:textColor="@color/paper_white" android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_cooldowns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="冷却追踪中"
+            android:textColor="@color/gold"
+            android:textSize="12sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="✕"
+            android:textColor="@color/paper_white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="经济差: 0"
+        android:textColor="@color/paper_white"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+
 </LinearLayout>

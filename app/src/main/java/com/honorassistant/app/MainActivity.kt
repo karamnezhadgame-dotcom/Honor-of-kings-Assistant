@@ -3,7 +3,6 @@ package com.honorassistant.app
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.honorassistant.app.databinding.ActivityMainBinding
 
@@ -17,9 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navController = binding.navHostFragment.findNavController()
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.heroListFragment, R.id.insightsFragment, R.id.loreFragment)
-        )
         binding.bottomNav.setupWithNavController(navController)
     }
 }

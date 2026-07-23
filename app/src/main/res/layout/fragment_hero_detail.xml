@@ -3,14 +3,151 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/paper_white">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-        <ImageView android:id="@+id/iv_detail_splash" android:layout_width="match_parent" android:layout_height="400dp" android:scaleType="centerCrop" android:background="@color/ink_grey" />
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:background="@color/paper_white">
-            <TextView android:id="@+id/tv_detail_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="李白" android:textColor="@color/text_primary" android:textSize="32sp" android:textStyle="bold" android:fontFamily="serif" />
-            <TextView android:id="@+id/tv_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="青莲剑仙" android:textColor="@color/gold_dark" android:textSize="16sp" />
-            <TextView android:id="@+id/tv_detail_lore" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="背景故事" android:textColor="@color/text_primary" android:textSize="15sp" android:background="@color/canghuang" android:padding="16dp" />
-            <LinearLayout android:id="@+id/ll_skills_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp" />
-            <LinearLayout android:id="@+id/ll_skins_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_hero_splash"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            android:background="@color/canghuang" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_hero_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="英雄名"
+                android:textColor="@color/ink_grey"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+
+            <TextView
+                android:id="@+id/tv_hero_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="称号"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tv_hero_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="职业：刺客"
+                    android:textColor="@color/paper_white"
+                    android:textSize="12sp"
+                    android:background="@color/ink_grey"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_hero_difficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="难度：★★★"
+                    android:textColor="@color/gold"
+                    android:textSize="12sp"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Lore -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="背景故事"
+                android:textColor="@color/ink_grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_marginTop="20dp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:background="@color/gold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tv_hero_lore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="故事内容..."
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:lineSpacingExtra="6sp"
+                android:fontFamily="serif" />
+
+            <!-- Skills -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="技能"
+                android:textColor="@color/ink_grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_marginTop="24dp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:background="@color/gold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Skins -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="皮肤"
+                android:textColor="@color/ink_grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_marginTop="24dp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:background="@color/gold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_skins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp" />
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

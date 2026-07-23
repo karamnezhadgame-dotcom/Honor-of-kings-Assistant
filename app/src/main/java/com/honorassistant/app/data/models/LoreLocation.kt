@@ -6,5 +6,5 @@ data class LoreLocation(
     val description: String,
     val imageUrl: String,
     val associatedHeroes: List<String>,
-    val loreChapters: List<String>
+    val chapters: List<String>
 )
