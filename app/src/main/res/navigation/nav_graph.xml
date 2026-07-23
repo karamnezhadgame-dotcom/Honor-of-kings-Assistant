@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/heroListFragment">
+    <fragment android:id="@+id/heroListFragment" android:name="com.honorassistant.app.ui.hero.HeroListFragment" android:label="英雄录" />
+    <fragment android:id="@+id/insightsFragment" android:name="com.honorassistant.app.ui.insights.InsightsFragment" android:label="大神观" />
+    <fragment android:id="@+id/loreFragment" android:name="com.honorassistant.app.ui.lore.LoreFragment" android:label="峡谷志" />
+</navigation>
