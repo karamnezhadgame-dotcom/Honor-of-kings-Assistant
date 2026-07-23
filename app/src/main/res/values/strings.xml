@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Honor Assistant</string>
+    <string name="tracker_description">追踪游戏内冷却与经济数据</string>
+</resources>
