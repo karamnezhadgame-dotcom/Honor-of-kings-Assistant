@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gold">#C9A96E</color>
+    <color name="gold_dark">#A8894A</color>
+    <color name="gold_light">#E8D5A3</color>
+    <color name="ink_grey">#2C2C2C</color>
+    <color name="paper_white">#F4F1EA</color>
+    <color name="canghuang">#D4C9A8</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#5A5A5A</color>
+    <color name="shalv">#8B9A7A</color>
+    <color name="luodai">#6E4E3E</color>
+</resources>
